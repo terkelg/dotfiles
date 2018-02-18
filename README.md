@@ -29,11 +29,6 @@ Make sure you have the following macOS dependencies installed:
 - [Homebrew](http://brew.sh) package manager (macOS)
 - [GNU Stow](https://www.gnu.org/software/stow/) symlink manager
 
-## Links
-
-- https://wiki.hpcc.msu.edu/display/hpccdocs/Adding+a+Private+Key+to+Your+Mac+OSX+Keychain
-- https://apple.stackexchange.com/questions/48502/how-can-i-permanently-add-my-ssh-private-key-to-keychain-so-it-is-automatically
-
 
 ## See also
 
