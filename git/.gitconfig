@@ -1,0 +1,72 @@
+[user]
+  email = terkel@terkel.com
+  name = Terkel Gjervig
+  signingkey = BF8542FD44D48045
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vim
+  # Make `git rebase` safer on macOS
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+  interactive = auto
+
+[gpg]
+	program = gpg2
+
+[commit]
+  gpgsign = true
+
+[web]
+  browser = open
+
+[diff]
+  tool = vimdiff
+
+[gui]
+  spellingdictionary = en
+
+[alias]
+  # View abbreviated SHA, description, and history graph
+  l = log --pretty=oneline --abbrev-commit --graph --decorate
+  s = status -sb
+  br = branch
+  ci = commit
+  co = checkout
+  st = status
+  ds = !git diff | diffstat -C
+  ll = log --pretty=format:'%C(yellow)%h%C(cyan)%d%C(reset) %s %C(green)(%ar) %C(blue)<%an>%C(reset)' --graph --decorate
+  branches = branch -a --color -v # show all branches, even across remotes
+  append = commit -a --amend -C HEAD
+  discard = reset --hard HEAD
+  hash = rev-parse --short HEAD
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  track = checkout -t
+  unmerged = ls-files --unmerged
+  unpush = push -f origin HEAD^:master
+  unstage = reset -q HEAD --
+  yesterday = diff --name-only --stat @{1.days.ago}
+  today = log --since=midnight --oneline --no-merges
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1 -i; }; f"
+  # ...with fuzzy search
+  fzf = "!git log --color=never --format='%h%d %s %cr' | fzf | awk '{print $1}' | git show --stdin"
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
+
+[credential]
+  helper = osxkeychain
+
+[github]
+  user = terkelg
+
+[format]
+  pretty = "%H %ci %ce %ae %d %s"

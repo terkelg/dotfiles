@@ -1,0 +1,21 @@
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Custom icon files
+Icon?
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Node modules
+node_modules
+
+# Work
+HTML/assets/runtime
+win32/render

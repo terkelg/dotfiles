@@ -1,0 +1,101 @@
+set commit-order = default
+set horizontal-scroll = 33%
+set ignore-case = yes
+set line-graphics = utf-8
+set show-changes = yes
+set tab-size = 4
+set mouse = yes
+
+bind generic j          move-down
+bind generic k          move-up
+bind generic >          scroll-right
+bind generic <LessThan> scroll-left
+bind generic <Right>    scroll-right
+bind generic <Left>     scroll-left
+
+bind generic g  none
+bind generic gg move-first-line
+bind generic gj next
+bind generic gk previous
+bind generic gp parent
+bind generic gP back
+bind generic gn view-next
+
+bind main    G  none
+bind generic G  move-last-line
+
+bind generic V  show-version
+bind generic v  none
+bind generic vm view-main
+bind generic vd view-diff
+bind generic vl view-log
+bind generic vt view-tree
+bind generic vb view-blob
+bind generic vx view-blame
+bind generic vr view-refs
+bind generic vs view-status
+bind generic vu view-stage
+bind generic vy view-stash
+bind generic vg view-grep
+bind generic vp view-pager
+bind generic vh view-help
+
+bind generic o  none
+bind generic oa :toggle author
+bind generic od :toggle date
+bind generic of :toggle file-name
+bind generic oF :toggle file-filter
+bind generic og :toggle line-graphics
+bind generic oG :toggle commit-title-graph
+bind generic oi :toggle id
+bind generic on :toggle line-number
+bind generic oo :toggle sort-order
+bind generic op :toggle ignore-space
+bind generic or :toggle commit-title-refs
+bind generic os :toggle sort-field
+bind generic ot :toggle commit-title-overflow
+
+bind diff  <C-N> :/^@@
+bind diff  <C-P> :?^@@
+bind stage <C-N> :/^@@
+bind stage <C-P> :?^@@
+bind log   @     :/^commit
+bind log   <C-N> :/^commit
+bind log   <C-P> :?^commit
+
+bind status  u  none
+bind stage   u  none
+bind status uu status-update
+bind status -  status-update
+bind status ur status-revert
+bind status um status-merge
+bind status ul stage-update-line
+bind stage  us stage-split-chunk
+bind stage  uu status-update
+bind stage  -  status-update
+bind stage  ur status-revert
+bind stage  um status-merge
+bind stage  ul stage-update-line
+bind stage  us stage-split-chunk
+
+bind generic c  none
+bind status  cc !git commit
+bind status  C  !git commit --verbose
+bind status  ca !?@git commit --amend --no-edit
+bind stage   cc !git commit
+bind stage   C  !git commit --verbose
+bind stage   ca !?@git commit --amend --no-edit
+
+bind generic K view-help
+bind generic <C-W><C-W> view-next
+
+bind generic <C-F>    move-page-down
+bind generic <C-B>    move-page-up
+bind generic <C-D>    move-half-page-down
+bind generic <C-U>    move-half-page-up
+bind generic <Up>     scroll-line-up
+bind generic <Down>   scroll-line-down
+bind generic 0        scroll-first-col
+
+color title-blur      color248 color241
+color title-focus     color255 color241 bold
