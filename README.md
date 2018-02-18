@@ -1,18 +1,14 @@
 
 # Dotfiles
-> Dotfiles. Bash. KISS. XO.
+> Dotfiles. Bash. No fancy plugin-managers. KISS. XO.
 
-Components:
+**Components:**
 - *[Bash](https://www.gnu.org/software/bash/)*
 - *[Git](https://git-scm.com/)*
 - *[Tmux](https://tmux.github.io/)*
 - *[Vim](https://vim.org)*
 
-Features:
-- Good old Bash
-- No fancy plugin-managers
-
-*Vim files are in their own repo!*
+> **Vim:** My vim configuration live its their [own repo](https://github.com/terkelg/vimrc)!
 
 ## Installation
 
