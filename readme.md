@@ -41,4 +41,4 @@ There are other great dotfiles around:
 
 ## License
 
-MIT
+MIT © [Terkel Gjervig](https://terkel.com)
