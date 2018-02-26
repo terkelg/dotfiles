@@ -9,7 +9,7 @@
 - *[Tmux](https://tmux.github.io/)*
 - *[Vim](https://vim.org)*
 
-> **Vim:** My vim configuration live its their [own repo](https://github.com/terkelg/vimrc)!
+> **Vim:** My vim configuration live in its [own repo](https://github.com/terkelg/vimrc)!
 
 ## Installation
 
