@@ -1,7 +1,7 @@
 # Dotfiles
 > Dotfiles. Bash. No fancy plugin-managers. KISS. XO.
 
-![screenshot](screenshot.png)
+![screenshot](https://github.com/terkelg/dotfiles/blob/master/screenshot.jpg?raw=true)
 
 **Components:**
 - *[Bash](https://www.gnu.org/software/bash/)*
