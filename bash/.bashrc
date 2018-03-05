@@ -42,22 +42,12 @@ prompt_command() {
   local __git="$(__git_ps1 '%s')"
   local __tail="$MAGENTA"
   local __restore="$RESTORE"
+  local __prompt_symbol="❯"
 
-  # colour branch name depending on state
-  if [[ "$(__git_ps1)" =~ "*" ]]; then     # if repository is dirty
-      __branch_color="$RED"
-  elif [[ "$(__git_ps1)" =~ "$" ]]; then   # if there is something stashed
-      __branch_color="$YELLOW"
-  elif [[ "$(__git_ps1)" =~ "%" ]]; then   # if there are only untracked files
-      __branch_color="$LIGHT_GRAY"
-  elif [[ "$(__git_ps1)" =~ "+" ]]; then   # if there are staged files
-      __branch_color="$CYAN"
-  fi
-
-  # use arrows / replace < > and <>
+  # TODO: replace < > and <> with symbols
 
   # Build the PS1 (Prompt String)
-  PS1="$__location $__branch_color$__git\n$__tail\[❯\] $__restore"
+  PS1="$__location $__branch_color$__git\[\n\]$__tail$__prompt_symbol $__restore"
 }
 
 # configure PROMPT_COMMAND which is executed each time before PS1
