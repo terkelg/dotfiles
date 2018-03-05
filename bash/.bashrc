@@ -23,10 +23,57 @@ shopt -s histappend;
 #  shopt -s "$option" 2> /dev/null;
 #done;
 
-lf_ssh=$([ "${SSH_TTY}" ] && echo "⎋ ")
-PS1='\e[34m\w\e[0m\n';
-PS1+='\e[1;35m❯\e[0m ';
-export PS1;
+# store colors
+MAGENTA="\[\033[0;35m\]"
+YELLOW="\[\033[01;32m\]"
+BLUE="\[\033[00;34m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+GRAY="\[\033[1;30m\]"
+CYAN="\[\033[0;36m\]"
+GREEN="\[\033[00m\]"
+RED="\[\033[0;31m\]"
+VIOLET="\[\033[01;35m\]"
+WHITE="\[\033[01;37m\]"
+RESTORE="\[\033[0m\]"
+
+prompt_command() {
+  local __location="$BLUE\w"
+  local __branch_color="$GRAY"
+  local __git="$(__git_ps1 '%s')"
+  local __tail="$MAGENTA"
+  local __restore="$RESTORE"
+
+  # colour branch name depending on state
+  if [[ "$(__git_ps1)" =~ "*" ]]; then     # if repository is dirty
+      __branch_color="$RED"
+  elif [[ "$(__git_ps1)" =~ "$" ]]; then   # if there is something stashed
+      __branch_color="$YELLOW"
+  elif [[ "$(__git_ps1)" =~ "%" ]]; then   # if there are only untracked files
+      __branch_color="$LIGHT_GRAY"
+  elif [[ "$(__git_ps1)" =~ "+" ]]; then   # if there are staged files
+      __branch_color="$CYAN"
+  fi
+
+  # use arrows / replace < > and <>
+
+  # Build the PS1 (Prompt String)
+  PS1="$__location $__branch_color$__git\n$__tail\[❯\] $__restore"
+}
+
+# configure PROMPT_COMMAND which is executed each time before PS1
+export PROMPT_COMMAND=prompt_command
+
+# if .git-prompt.sh exists, set options and execute it
+if [ -f ~/.git-prompt.sh ]; then
+  GIT_PS1_SHOWDIRTYSTATE=true
+  GIT_PS1_SHOWSTASHSTATE=true
+  GIT_PS1_SHOWUNTRACKEDFILES=true
+  GIT_PS1_SHOWUPSTREAM="auto"
+  GIT_PS1_HIDE_IF_PWD_IGNORED=true
+  GIT_PS1_SHOWCOLORHINTS=true
+  . ~/.git-prompt.sh
+fi
+
 export PS2="→ ";
 
 GPG_TTY=$(tty)
@@ -56,6 +103,7 @@ alias ll='ls -alGpF'
 alias nb='npm run build'
 alias ns='npm run start'
 alias nt='npm run test'
+alias np='npm version patch && git push origin --tags && npm publish'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
@@ -68,11 +116,11 @@ alias d='cd ~/Documents/Dropbox'
 alias dl='cd ~/Downloads'
 alias dt='cd ~/Desktop'
 alias s='cd ~/src'
-alias r='cd ~/src/robin'
 alias t='cd ~/src/terkel'
 alias a='cd ~/src/activetheory'
 
 # Git
+alias g='git'
 alias gap='git add . -p'
 alias gb='git branch'
 alias gba='git branches'
@@ -94,10 +142,6 @@ function localip {
 # Top... twenty commands used :>
 function topten {
   history | awk '{ print $2 }' | LC_ALL=C sort -i | LC_ALL=C uniq -c | LC_ALL=C sort -irn | head -n 20
-}
-
-function man2pdf {
-  man -t $1 | open -f -a Preview
 }
 
 # Better tree lists
@@ -137,19 +181,6 @@ fkill() {
   then
     echo $pid | xargs kill -${1:-9}
   fi
-}
-
-MARKPATH=$HOME/.marks
-CDPATH=.:$MARKPATH
-
-function mark {
-  mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
-}
-function unmark {
-  rm -i "$MARKPATH/$1"
-}
-function marks {
-  (t="$(printf "\t")"; cd $MARKPATH && stat -f"%N$t%SY" * | column -ts"$t")
 }
 
 # fzf shell extensions
