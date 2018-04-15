@@ -139,6 +139,11 @@ tt() {
     tree -I '.git|.node_modules|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -aC $2
 }
 
+# Easy npm publish
+publish() {
+  npm version "$1" && git push origin --tags && npm publish
+}
+
 # extract any time of compressed file
 extract() {
     echo Extracting $1 ...
