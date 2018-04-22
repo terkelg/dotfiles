@@ -44,10 +44,9 @@ prompt_command() {
   local __restore="$RESTORE"
   local __prompt_symbol="❯"
 
-  # TODO: replace < > and <> with symbols
+  # TODO: replace < > and <> with nice symbols
 
-  # Build the PS1 (Prompt String)
-  PS1="$__location $__branch_color$__git\[\n\]$__tail$__prompt_symbol $__restore"
+  PS1="$__location $__branch_color$__git\n$__tail$__prompt_symbol $__restore"
 }
 
 # configure PROMPT_COMMAND which is executed each time before PS1
