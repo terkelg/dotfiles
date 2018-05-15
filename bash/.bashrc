@@ -92,7 +92,7 @@ alias ll='ls -alGpF'
 alias nb='npm run build'
 alias ns='npm run start'
 alias nt='npm run test'
-alias np='npm version patch && git push origin --tags && npm publish'
+alias np='npm version patch && git push origin master --tags && npm publish'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
@@ -140,7 +140,7 @@ tt() {
 
 # Easy npm publish
 publish() {
-  npm version "$1" && git push origin --tags && npm publish
+  npm version "$1" && git push origin master --tags && npm publish
 }
 
 # extract any time of compressed file
