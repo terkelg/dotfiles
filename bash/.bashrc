@@ -88,6 +88,10 @@ alias -- -="cd -"
 alias ls='ls -GpF'
 alias ll='ls -alGpF'
 
+# Vim
+alias vim="nvim"
+export EDITOR=nvim
+
 # NPM
 alias nb='npm run build'
 alias ns='npm run start'
