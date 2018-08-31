@@ -17,21 +17,24 @@ brew install grep
 brew install openssh
 brew install screen
 
-# Awesome tools
-brew install fzf
-brew install z 
+# Basics
 brew install node
 brew install git
 brew install git-lfs
-brew install ack
-brew install ripgrep
-brew install tree
-brew install wget
-brew install tig
-brew install youtube-dl
-brew install diff-so-fancy
-brew install httpie
-brew install highlight
+
+# Tools
+brew install fzf           # Fuzzy search
+brew install diff-so-fancy # Fancy git diffing
+brew install z             # Fast directory change
+brew install httpie        # HTTP Client
+brew install ripgrep       # Recursively searches directories with regex
+brew install tig           # Git Client
+brew install bat           # Better 'cat'
+brew install highlight     # Code highlighting (Used by fzf)
+brew install tree          # List dirs as tree graphs
+brew install ack           # Grep-like text finder
+brew install wget          # Download stuff from the web
+brew install youtube-dl    # Download videos
 brew install gnu-sed --with-default-names
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)

@@ -92,6 +92,9 @@ alias ll='ls -alGpF'
 alias vim="nvim"
 export EDITOR=nvim
 
+# Tools
+alias cat="bat"
+
 # NPM
 alias nb='npm run build'
 alias ns='npm run start'
