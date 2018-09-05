@@ -90,10 +90,14 @@ alias ll='ls -alGpF'
 
 # Vim
 alias vim="nvim"
-export EDITOR=nvim
 
 # Tools
+# - ignore alias: \cat or command cat
 alias cat="bat"
+alias ping='prettyping --nolegend'
+alias preview="fzf --preview 'bat --color \"always\" {}'"
+alias top="sudo htop" # alias top and fix high sierra bug
+alias help='tldr'
 
 # NPM
 alias nb='npm run build'

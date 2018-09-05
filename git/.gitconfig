@@ -1,6 +1,6 @@
 [user]
-  email = terkel@terkel.com
-  name = Terkel Gjervig
+	email = terkel@terkel.com
+	name = Terkel Gjervig
   signingkey = BF8542FD44D48045
 
 [core]
@@ -27,7 +27,8 @@
   browser = open
 
 [diff]
-  tool = vimdiff
+  tool = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
 
 [gui]
   spellingdictionary = en
