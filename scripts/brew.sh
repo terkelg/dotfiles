@@ -21,6 +21,7 @@ brew install screen
 brew install node
 brew install git
 brew install git-lfs
+brew install tmux
 
 # Tools
 brew install fzf           # Fuzzy search
@@ -39,6 +40,8 @@ brew install prettyping    # Nicer ping command
 brew install htop          # Better top (quickly diagnosing CPU)
 brew install tldr          # Useful help
 brew install fd            # A simple, fast and user-friendly alternative to 'find'
+brew install neovim	   # Neovim
+brew install bash-completion
 brew install gnu-sed --with-default-names
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
