@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Taken from: https://github.com/kevinSuttle/macOS-Defaults
+
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
