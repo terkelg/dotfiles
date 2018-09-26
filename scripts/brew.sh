@@ -40,10 +40,13 @@ brew install prettyping    # Nicer ping command
 brew install htop          # Better top (quickly diagnosing CPU)
 brew install tldr          # Useful help
 brew install fd            # A simple, fast and user-friendly alternative to 'find'
-brew install neovim	   # Neovim
 brew install bash-completion
 brew install gnu-sed --with-default-names
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
+
+# Neovim and Python
+brew install python3
+pip3 install neovim
