@@ -1,4 +1,3 @@
 .DS_Store
-zsh/.zsh/antigen.zsh
-zsh/.zsh/private.zsh
-vim/.vim/plugged
+ssh/*
+!ssh/.ssh/config
