@@ -1,5 +1,5 @@
 STOW ?= stow
-DIRS ?= etc git tmux gpg ssh bash
+DIRS ?= etc git tmux gpg ssh bash config
 DOTDIR = $(shell pwd)
 HOME = /Users/terkel
 IGNORE = .DS_Store
