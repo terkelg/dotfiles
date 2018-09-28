@@ -3,7 +3,6 @@ DIRS ?= etc git tmux gpg ssh bash
 DOTDIR = $(shell pwd)
 HOME = /Users/terkel
 IGNORE = .DS_Store
-ccyellow=$(echo -e "\033[0;33m")
 
 bootstrap: links setup
 
