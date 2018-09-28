@@ -1,3 +1,7 @@
 .DS_Store
+
 ssh/*
 !ssh/.ssh/config
+
+etc/.config
+!etc/.config/nvim
