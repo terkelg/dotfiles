@@ -42,6 +42,7 @@ brew install tldr          # Useful help
 brew install fd            # A simple, fast and user-friendly alternative to 'find'
 brew install bash-completion
 brew install gnu-sed --with-default-names
+brew install reattach-to-user-namespace # Copy and Paste with tmux on macos
 
 # Quick Look Plugins (https://github.com/sindresorhus/quick-look-plugins)
 brew tap caskroom/cask
