@@ -17,7 +17,7 @@ Run the following command inside of your favourite terminal:
 
 ```sh
 $ git clone https://github.com/terkelg/dotfiles.git
-$ cd $_ && scripts/brew.sh && make
+$ cd $_ && make
 ```
 
 ### Tools
