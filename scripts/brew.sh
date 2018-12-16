@@ -48,6 +48,9 @@ brew install reattach-to-user-namespace # Copy and Paste with tmux on macos
 brew tap caskroom/cask
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql qlimagesize webpquicklook suspicious-package
 
+# GPG Tools
+brew cask install gpg-suite
+
 # Neovim and Python
 brew install python3
 pip3 install neovim
