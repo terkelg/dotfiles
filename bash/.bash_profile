@@ -25,6 +25,11 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(vim {})+abort'"
 # Using highlight - https://remysharp.com/2018/08/23/cli-improved
 export FZF_CTRL_T_OPTS="$FZF_DEFAULT_OPTS --no-height --preview 'bat --color \"always\" {}'"
 
+# https://github.com/drduh/YubiKey-Guide#replace-agents
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+
 # ~/.bash_profile_top_secret can be used for settings that must not be shared.
 if [ -r .bash_profile_top_secret ] && [ -f .bash_profile_top_secret ] ; then
     source .bash_profile_top_secret
@@ -33,3 +38,4 @@ fi
 # Load .bashrc only if this is an interactive shell
 case "$-" in *i*) . ~/.bashrc; esac;
 export PATH="/usr/local/opt/ncurses/bin:$PATH"
+

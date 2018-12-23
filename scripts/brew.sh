@@ -51,6 +51,9 @@ brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch 
 # GPG Tools
 brew cask install gpg-suite
 
+# Yubikey / smartcard
+brew install yubikey-personalization hopenpgp-tools ykman
+
 # Neovim and Python
 brew install python3
 pip3 install neovim
