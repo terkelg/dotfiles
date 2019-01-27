@@ -30,6 +30,12 @@ Make sure you have the following macOS dependencies installed:
 - [Homebrew](http://brew.sh) package manager (macOS)
 - [GNU Stow](https://www.gnu.org/software/stow/) symlink manager
 
+Run the following command to install all tools:
+
+```sh
+sudo scripts/install.sh
+```
+
 
 ## See also
 
