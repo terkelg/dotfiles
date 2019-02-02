@@ -10,7 +10,7 @@
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use 'alacritty' if it is
   # available, otherwise 'xterm-256color' is used.
-  #TERM: xterm-256color
+  #TERM: xterm-256color-italic
 
 window:
   # Window dimensions (changes require restart)
@@ -297,10 +297,12 @@ live_config_reload: true
 #
 # You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
 # Entries in `shell.args` are passed unmodified as arguments to the shell.
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /bin/bash
+  args:
+    - --login
+    - -c
+    - 'tmux attach -t TMUX || tmux new -s TMUX'
 
 # Key bindings
 #
@@ -412,12 +414,10 @@ key_bindings:
   - { key: Delete,                  chars: "\x1b[3~"                     }
   - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
   - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
-  - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
   - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
   - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
   - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
   - { key: Right,    mods: Control, chars: "\x1b[1;5C"                   }
-  - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
   - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
   - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
   - { key: Up,       mods: Shift,   chars: "\x1b[1;2A"                   }
