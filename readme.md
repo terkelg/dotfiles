@@ -8,6 +8,7 @@
 - *[Git](https://git-scm.com/)*
 - *[Tmux](https://tmux.github.io/)*
 - *[Vim](https://vim.org)*
+- *[Alacritty](https://github.com/jwilm/alacritty)*
 
 > **Vim:** My vim configuration live in its [own repo](https://github.com/terkelg/vimrc)!
 
@@ -36,6 +37,18 @@ Run the following command to install all tools:
 sudo scripts/install.sh
 ```
 
+
+## Make
+
+Symlink only:
+```
+make links
+```
+
+Install tools:
+```
+make setup
+```
 
 ## See also
 
