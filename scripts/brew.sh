@@ -54,6 +54,9 @@ brew cask install gpg-suite
 # Yubikey / smartcard
 brew install yubikey-personalization hopenpgp-tools ykman
 
+# Best terminal emulator, ever
+brew cask install alacritty
+
 # Neovim and Python
 brew install python3
 pip3 install neovim
