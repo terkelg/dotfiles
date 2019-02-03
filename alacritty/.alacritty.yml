@@ -493,3 +493,6 @@ key_bindings:
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
+
+  # Map ctrl + space tmux prefix (github.com/jwilm/alacritty/issues/99)
+  - { key: Space,    mods: Control, chars: "\x00"                        }
