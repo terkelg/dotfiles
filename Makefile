@@ -4,16 +4,16 @@ DOTDIR = $(shell pwd)
 HOME = /Users/terkel
 IGNORE = .DS_Store
 
-bootstrap: links setup
+setup: dependencies config link
 
-links:
+link:
 	@$(STOW) --target=$(HOME) --ignore=$(IGNORE) -Rv $(DIRS)
 
-setup: links
+dependencies:
 	./scripts/brew.sh
 	./scripts/npm.sh
-	./scripts/terminfo.sh
+	./scripts/other.sh
 
-setup-macos:
-	> Setup macOS defaults
+config:
+	./scripts/terminfo.sh
 	./scripts/macos.sh
