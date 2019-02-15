@@ -5,7 +5,7 @@
 
 [core]
   excludesfile = ~/.gitignore
-  editor = vim
+  editor = nvim
   # Make `git rebase` safer on macOS
   # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
   trustctime = false
@@ -18,7 +18,7 @@
   interactive = auto
 
 [gpg]
-  program = /usr/local/MacGPG2/bin/gpg
+	program = gpg2
 
 [commit]
   gpgsign = true
