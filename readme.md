@@ -12,43 +12,53 @@
 
 > **Vim:** My vim configuration live in its [own repo](https://github.com/terkelg/vimrc)!
 
-## Installation
+## Get Started
 
 Run the following command inside of your favourite terminal:
 
+### Get Started
+
+Clone the repo into your preferred directory
+
 ```sh
 $ git clone https://github.com/terkelg/dotfiles.git
-$ cd $_ && make
 ```
 
-### Tools
+> **Note:** Make sure you have the [Homebrew](http://brew.sh) package manager installed before you continue.
 
-Additional tools can be installed using the scripts in `scripts`.
-
-
-Make sure you have the following macOS dependencies installed:
-
-- [Homebrew](http://brew.sh) package manager (macOS)
-- [GNU Stow](https://www.gnu.org/software/stow/) symlink manager
-
-Run the following command to install all tools:
+`cd` into directory and call make to bootstrap everything:
 
 ```sh
-sudo scripts/install.sh
+make
 ```
 
+Symlink files only
 
-## Make
-
-Symlink only:
-```
-make links
+```sh
+make link
 ```
 
-Install tools:
+Download and install tools
+```sh
+make dependencies
 ```
-make setup
+
+Configure system and set defaults
+```sh
+make config
 ```
+
+### Alacritty
+
+Make sure to change font in `.alacritty.yml` or install the font `Operator Mono SS` otherwise Alacritty will crash immediately.
+
+> **Note:** If alacritty doesn't load the correct config file, make sure to [remove defaults](https://github.com/jwilm/alacritty#configuration).
+
+## Smart Cards
+
+When using multiple smart cards with GPG, switching them is annoying because GPG will keep asking for the previous card you plugged in.
+
+Run `switch-card` and it will help you remove secret key files.
 
 ## See also
 
