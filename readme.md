@@ -59,6 +59,7 @@ Make sure to change font in `.alacritty.yml` or install the font `Operator Mono 
 When using multiple smart cards with GPG, switching them is annoying because GPG will keep asking for the previous card you plugged in.
 
 Run `switch-card` and it will help you remove secret key files.
+If you get `gpg failed to sign the data` when you're trying to sign a commit try [these steps](https://github.com/ruimarinho/yubikey-handbook/blob/master/openpgp/troubleshooting/gpg-failed-to-sign-the-data.md).
 
 ## See also
 
