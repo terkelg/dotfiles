@@ -15,7 +15,7 @@ export HISTCONTROL='ignoreboth';
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md=$(tput setaf 64);
 HOMEBREW_PREFIX=/usr/local
-export PATH="$HOME/Applications/Scripts:$HOME/.cabal/bin:$HOMEBREW_PREFIX/sbin:$PATH"
+export PATH="$HOME/.bin:$HOME/Applications/Scripts:$HOME/.cabal/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 unset HOMEBREW_PREFIX
 
 # fzf
