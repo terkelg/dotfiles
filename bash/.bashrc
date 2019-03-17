@@ -131,6 +131,9 @@ alias gp='git push'
 alias gs='git s'
 alias gst='git st'
 
+# Safe delete
+alias del="mv -t ~/.Trash/"
+
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
