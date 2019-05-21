@@ -117,7 +117,7 @@ alias dl='cd ~/Downloads'
 alias dt='cd ~/Desktop'
 alias s='cd ~/src'
 alias t='cd ~/src/terkel'
-alias a='cd ~/src/activetheory'
+alias w='cd ~/src/hellomonday'
 
 # Git
 alias g='git'
