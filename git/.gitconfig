@@ -21,7 +21,7 @@
 	program = gpg2
 
 [commit]
-  gpgsign = true
+  gpgsign = false # dont auto sign because of xcodes
 
 [web]
   browser = open
@@ -38,7 +38,7 @@
   l = log --pretty=oneline --abbrev-commit --graph --decorate
   s = status -sb
   br = branch
-  ci = commit
+  ci = commit -S -a -m
   co = checkout
   st = status
   ds = !git diff | diffstat -C
