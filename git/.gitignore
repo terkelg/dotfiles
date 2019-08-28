@@ -15,7 +15,3 @@ Icon?
 
 # Node modules
 node_modules
-
-# Work
-HTML/assets/runtime
-win32/render
