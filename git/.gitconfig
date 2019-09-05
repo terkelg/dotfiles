@@ -54,6 +54,10 @@
   unstage = reset -q HEAD --
   yesterday = diff --name-only --stat @{1.days.ago}
   today = log --since=midnight --oneline --no-merges
+  # ignore local files without adding to gitignore
+  ignore = update-index --skip-worktree
+  unignore = update-index --no-skip-worktree
+  ignored = !git ls-files -v | grep "^S"
 
   # Find commits by commit message
   fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1 -i; }; f"
@@ -71,3 +75,5 @@
 
 [format]
   pretty = "%H %ci %ce %ae %d %s"
+[http]
+	cookiefile = /Users/terkel/.gitcookies
