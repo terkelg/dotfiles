@@ -13,6 +13,8 @@ export FZF_DEFAULT_OPTS='
 GPG_TTY=$(tty)
 export GPG_TTY
 
+alias reload='source ~/.zshrc'
+
 # Functions
 #fpath+=~/.zshfunctions
 #autoload topten
