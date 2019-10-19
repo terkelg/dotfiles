@@ -48,7 +48,7 @@ source ~/.zsh_plugins
 source ~/.zsh_aliases
 
 # Load functions
-source ~/.zsh_aliases
+source ~/.zsh_functions
 
 # Load completion configuration
 source ~/.zsh_completion

@@ -1,10 +1,11 @@
 # Dotfiles
-> Dotfiles. Bash. No fancy plugin-managers. KISS. XO.
+> Dotfiles. No fancy plugin-managers. KISS.
 
 ![screenshot](https://github.com/terkelg/dotfiles/blob/master/screenshot.jpg?raw=true)
 
 **Components:**
 - *[Bash](https://www.gnu.org/software/bash/)*
+- *[ZSH](http://zsh.sourceforge.net)*
 - *[Git](https://git-scm.com/)*
 - *[Tmux](https://tmux.github.io/)*
 - *[Vim](https://vim.org)*
