@@ -1,0 +1,49 @@
+# vim: ft=zsh
+
+# Easy npm publish
+publish() {
+  npm version "$1" && git push origin master --tags && npm publish
+}
+
+# Local IP
+localip() {
+  ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}'
+}
+
+# Better tree lists
+tt() {
+    tree -I '.git|.node_modules|.DS_Store' --dirsfirst --filelimit 15 -L ${1:-3} -aC $2
+}
+
+# fkill - kill process
+fkill() {
+  local pid
+  pid=$(ps -ef | sed 1d | fzf -m | awk '{print $2}')
+
+  if [ "x$pid" != "x" ]
+  then
+    echo $pid | xargs kill -${1:-9}
+  fi
+}
+
+# SSH
+load-our-ssh-keys() {
+  # Fun with SSH
+  if [ $(ssh-add -l | grep -c "The agent has no identities." ) -eq 1 ]; then
+    if [[ "$(uname -s)" == "Darwin" ]]; then
+      # macOS allows us to store ssh key pass phrases in the keychain, so try
+      # to load ssh keys using pass phrases stored in the macOS keychain.
+      #
+      # You can use ssh-add -K /path/to/key to store pass phrases into
+      # the macOS keychain
+      ssh-add -k
+    fi
+
+    for key in $(find ~/.ssh -type f -a \( -name '*id_rsa' -o -name '*id_dsa' -name '*id_ecdsa' \))
+    do
+      if [ -f ${key} -a $(ssh-add -l | grep -c "${key//$HOME\//}" ) -eq 0 ]; then
+        # ssh-add ${key}
+      fi
+    done
+  fi
+}
