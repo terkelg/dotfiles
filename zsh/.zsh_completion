@@ -1,0 +1,26 @@
+# vim: ft=zsh
+
+# enable autocomplete function
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
+# folder of all of your autocomplete functions
+fpath=($HOME/.zsh/.zsh-completions $fpath)
+
+unsetopt  menu_complete       # Do not autoselect the first completion entry
+unsetopt  flowcontrol
+unsetopt  list_ambiguous      # Display completion list immediately on ambiguous completion
+setopt    auto_menu           # Show completion menu on successive tab press
+setopt    complete_in_word
+setopt    always_to_end
+setopt    glob_complete       # Generate completion list from glob expansion
+setopt    list_packed         # Make list of completions occupy less space
+setopt    list_rows_first     # Sort completions from left to right (by row)
+
+zstyle ':completion:*:*:*:*:*' menu select
+zstyle ':completion:*' special-dirs true # Complete . and .. special directories
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-]#)*=01;34=0=01'
+
+# Shift-Tab to select in reverse
+bindkey -M menuselect '^[[Z' reverse-menu-complete 

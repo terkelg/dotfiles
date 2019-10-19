@@ -1,0 +1,38 @@
+# vim: ft=zsh
+
+# Define plugin folder
+export ZIT_MODULES_PATH="${HOME}/.zsh/plugins/"
+
+# If Zit is not found, clone it
+if [[ ! -d "${ZIT_MODULES_PATH}/zit" ]]; then
+  git clone "https://github.com/thiagokokada/zit" "${ZIT_MODULES_PATH}/zit"
+fi
+# Source Zit file
+source "${ZIT_MODULES_PATH}/zit/zit.zsh"
+
+# Let Zit manage Zit upgrades
+zit-in "https://github.com/thiagokokada/zit" "zit"
+
+# Fish shell like syntax highlighting for Zsh
+zit-in "https://github.com/zsh-users/zsh-syntax-highlighting" "zsh-syntax-highlighting"
+zit-lo "zsh-syntax-highlighting" "zsh-syntax-highlighting.zsh"
+
+# Fish-like autosuggestions for zsh
+zit-in "https://github.com/zsh-users/zsh-autosuggestions" "zsh-autosuggestions"
+zit-lo "zsh-autosuggestions" "zsh-autosuggestions.zsh"
+
+# ZSH port of Fish history search (up arrow)
+zit-in "https://github.com/zsh-users/zsh-history-substring-search" "zsh-history-substring-search"
+zit-lo "zsh-history-substring-search" "zsh-history-substring-search.zsh"
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Jump around!
+zit-in "https://github.com/rupa/z" "z"
+zit-lo "z" "z.sh"
+
+# Install Pure theme, loads its dependency (async.zsh) and itself
+zit-in "https://github.com/sindresorhus/pure" "pure"
+zit-lo "pure" "async.zsh"
+zit-lo "pure" "pure.zsh"

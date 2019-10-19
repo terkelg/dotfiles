@@ -1,0 +1,55 @@
+# vim: ft=zsh
+
+# Aliases
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias .6='cd ../../../../../..'
+alias reload='source ~/.zshrc'
+
+# fs
+alias ls='ls -GpF'
+alias ll='ls -alGpF'
+
+# vim
+alias vim='nvim'
+
+# Tools
+# - ignore alias: \cat or command cat
+alias cat='bat'
+alias ping='prettyping --nolegend'
+alias preview='fzf --preview 'bat --color \"always\" {}''
+alias top='sudo htop' # alias top and fix high sierra bug
+alias help='tldr'
+
+# NPM
+alias nb='npm run build'
+alias ns='npm run start'
+alias nt='npm run test'
+alias np='npm version patch && git push origin master --tags && npm publish'
+
+# Git
+alias g='git'
+alias gap='git add . -p'
+alias gb='git branch'
+alias gba='git branches'
+alias gd='git diff'
+alias gds='git ds'
+alias gl='git ll'
+alias gp='git push'
+alias gs='git s'
+alias gst='git st'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Safe delete
+alias del="mv -t ~/.Trash/"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
