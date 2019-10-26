@@ -12,6 +12,11 @@ alias reload='source ~/.zshrc'
 alias ls='ls -GpF'
 alias ll='ls -alGpF'
 
+# exa
+alias ls='exa'
+alias ll='exa --long --git'
+alias lt='exa --long --git --tree --level=2'
+
 # vim
 alias vim='nvim'
 

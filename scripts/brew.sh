@@ -43,6 +43,7 @@ brew install tldr                             # Useful help
 brew install fd                               # A simple, fast and user-friendly alternative to 'find'
 brew install python3                          # Python
 brew install bash-completion                  # Autocompletion
+brew install exa                              # A modern replacement for ls
 brew install reattach-to-user-namespace       # Copy and Paste with tmux on macos
 brew install gnu-sed
 
