@@ -41,6 +41,10 @@ export FZF_DEFAULT_OPTS='
   --color fg:242,bg:-1,hl:238,fg+:243,bg+:-1,hl+:166
   --color info:248,prompt:243,spinner:242,pointer:242,marker:166'
 
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Install and load plugins
 source ~/.zsh_plugins
 

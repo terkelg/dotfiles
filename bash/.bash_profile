@@ -18,6 +18,11 @@ HOMEBREW_PREFIX=/usr/local
 export PATH="$HOME/.bin:$HOME/Applications/Scripts:$HOME/.cabal/bin:$HOMEBREW_PREFIX/sbin:$PATH"
 unset HOMEBREW_PREFIX
 
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 # fzf
 export FZF_DEFAULT_COMMAND='rg --glob "!{.git,node_modules}" --files 2>/dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
