@@ -31,6 +31,7 @@ brew install z                                # Fast directory change
 brew install httpie                           # HTTP Client
 brew install ripgrep                          # Recursively searches directories with regex
 brew install tig                              # Git Client
+brew install exa                              # A modern replacement for ls
 brew install bat                              # Better 'cat'
 brew install highlight                        # Code highlighting (Used by fzf)
 brew install tree                             # List dirs as tree graphs
@@ -42,10 +43,9 @@ brew install htop                             # Better top (quickly diagnosing C
 brew install tldr                             # Useful help
 brew install fd                               # A simple, fast and user-friendly alternative to 'find'
 brew install python3                          # Python
-brew install bash-completion                  # Autocompletion
-brew install exa                              # A modern replacement for ls
 brew install reattach-to-user-namespace       # Copy and Paste with tmux on macos
-brew install gnu-sed
+brew install gnu-sed                          # Non-interactive text editor
+brew install nnn                              # Terminal file browser
 
 # Yubikey / smartcard
 brew install yubikey-personalization hopenpgp-tools ykman
