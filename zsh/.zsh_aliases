@@ -1,11 +1,19 @@
 # vim: ft=zsh
 
-# Aliases
+# Safety first
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias del="mv -t ~/.Trash/"
+
+# cd
 alias .2='cd ../..'
 alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias .6='cd ../../../../../..'
+
+# zsh
 alias reload='source ~/.zshrc'
 
 # fs
@@ -21,7 +29,7 @@ alias lt='exa --long --git --tree --level=2'
 alias vim='nvim'
 
 # Tools
-# - ignore alias: \cat or command cat
+# To bypass alias run: `\cat or `command cat`
 alias cat='bat'
 alias ping='prettyping --nolegend'
 alias preview='fzf --preview 'bat --color \"always\" {}''
@@ -52,9 +60,5 @@ alias path='echo -e ${PATH//:/\\n}'
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
-# Safe delete
-alias del="mv -t ~/.Trash/"
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-

@@ -32,18 +32,11 @@ export CLICOLOR=1
 export EDITOR='nvim'
 export GREP_OPTIONS='--color=auto'
 
-# Highlight section titles in manual pages
-export LESS_TERMCAP_md=$(tput setaf 64);
-
 # FZF
 export FZF_DEFAULT_COMMAND='rg --files 2>/dev/null'
 export FZF_DEFAULT_OPTS='
   --color fg:242,bg:-1,hl:238,fg+:243,bg+:-1,hl+:166
   --color info:248,prompt:243,spinner:242,pointer:242,marker:166'
-
-# NVM
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Install and load plugins
 source ~/.zsh_plugins
@@ -58,3 +51,13 @@ source ~/.zsh_functions
 source ~/.zsh_completion
 
 load-our-ssh-keys
+
+# NVM
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/terkel/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/terkel/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/terkel/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/terkel/google-cloud-sdk/completion.zsh.inc'; fi

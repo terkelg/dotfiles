@@ -1,6 +1,6 @@
 [user]
-  email = terkel@terkel.com
-  name = Terkel Gjervig
+	email = terkel@terkel.com
+	name = Terkel Gjervig
   signingkey = 7B5BA05CF73FEB7A
 
 [core]
@@ -77,3 +77,8 @@
   pretty = "%H %ci %ce %ae %d %s"
 [http]
 	cookiefile = /Users/terkel/.gitcookies
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
