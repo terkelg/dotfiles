@@ -90,9 +90,11 @@ shell:
     - 'tmux attach -t TMUX || tmux new -s TMUX'
 
 key_bindings:
-  - { key: H,         mods: Command,      action: None                  }
-  - { key: Space,     mods: Alt,          chars: " "                    }
-  - { key: Space,     mods: Alt,          chars: " "                    }
+- { key: H,         mods: Command,      action: None                  }
+- { key: M,         mods: Command,      action: None                  }
+- { key: Q,         mods: Command,      action: None                  }
+- { key: Space,     mods: Alt,          chars: " "                    }
+- { key: Space,     mods: Alt,          chars: " "                    }
 
-  # Map ctrl + space tmux prefix (github.com/jwilm/alacritty/issues/99)
-  - { key: Space,     mods: Control,      chars: "\x00"                 }
+#   # Map ctrl + space tmux prefix (github.com/jwilm/alacritty/issues/99)
+- { key: Space,     mods: Control,      chars: "\x00"                 }
