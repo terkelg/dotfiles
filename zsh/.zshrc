@@ -20,7 +20,7 @@ bindkey -e
 bindkey $'^[^?' vi-backward-kill-word
 
 # Base PATH
-export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin"
+export PATH="$PATH:/usr/local/bin:/usr/local/sbin:/sbin:/usr/sbin:/bin:/usr/bin:usr/.cargo/env"
 
 # Geoff Greer made an online tool that makes it 
 # easy to customize your color scheme and keep them in sync
