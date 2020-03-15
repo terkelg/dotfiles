@@ -40,7 +40,7 @@ alias help='tldr'
 alias nb='npm run build'
 alias ns='npm run start'
 alias nt='npm run test'
-alias np='npm version patch && git push origin master --tags && npm publish'
+alias np='npm version patch && npm publish && git push origin master --tags'
 
 # Git
 alias g='git'
