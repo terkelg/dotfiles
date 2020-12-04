@@ -4,11 +4,7 @@
 ![screenshot](https://github.com/terkelg/dotfiles/blob/master/screenshot.jpg?raw=true)
 
 **Components:**
-- *[Bash](https://www.gnu.org/software/bash/)*
-- *[ZSH](http://zsh.sourceforge.net)*
-- *[Git](https://git-scm.com/)*
 - *[Tmux](https://tmux.github.io/)*
-- *[Vim](https://vim.org)*
 - *[Alacritty](https://github.com/jwilm/alacritty)*
 
 > **Vim:** My vim configuration live in its [own repo](https://github.com/terkelg/vimrc)!

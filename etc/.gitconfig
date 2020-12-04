@@ -1,0 +1,84 @@
+[user]
+	email = terkel@terkel.com
+	name = Terkel Gjervig
+  signingkey = 7B5BA05CF73FEB7A
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = nvim
+  # Make `git rebase` safer on macOS
+  # More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
+  trustctime = false
+
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+  interactive = auto
+
+[gpg]
+	program = gpg2
+
+[commit]
+  gpgsign = false # dont auto sign because of xcodes
+
+[web]
+  browser = open
+
+[diff]
+  tool = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+
+[gui]
+  spellingdictionary = en
+
+[alias]
+  # View abbreviated SHA, description, and history graph
+  l = log --pretty=oneline --abbrev-commit --graph --decorate
+  s = status -sb
+  br = branch
+  ci = commit -S -a -m
+  co = checkout
+  st = status
+  ds = !git diff | diffstat -C
+  ll = log --pretty=format:'%C(yellow)%h%C(cyan)%d%C(reset) %s %C(green)(%ar) %C(blue)<%an>%C(reset)' --graph --decorate
+  branches = branch -a --color -v # show all branches, even across remotes
+  append = commit -a --amend -C HEAD
+  discard = reset --hard HEAD
+  hash = rev-parse --short HEAD
+  nevermind = !git reset --hard HEAD && git clean -d -f
+  track = checkout -t
+  unmerged = ls-files --unmerged
+  unpush = push -f origin HEAD^:master
+  unstage = reset -q HEAD --
+  yesterday = diff --name-only --stat @{1.days.ago}
+  today = log --since=midnight --oneline --no-merges
+  # ignore local files without adding to gitignore
+  ignore = update-index --skip-worktree
+  unignore = update-index --no-skip-worktree
+  ignored = !git ls-files -v | grep "^S"
+
+  # Find commits by commit message
+  fm = "!f() { git log --pretty=format:'%C(yellow)%h  %Cblue%ad  %Creset%s%Cgreen  [%cn] %Cred%d' --decorate --date=short --grep=$1 -i; }; f"
+  # ...with fuzzy search
+  fzf = "!git log --color=never --format='%h%d %s %cr' | fzf | awk '{print $1}' | git show --stdin"
+
+  # List contributors with number of commits
+  contributors = shortlog --summary --numbered
+
+[credential]
+  helper = osxkeychain
+
+[github]
+  user = terkelg
+
+[format]
+  pretty = "%H %ci %ce %ae %d %s"
+[http]
+	cookiefile = /Users/terkel/.gitcookies
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process

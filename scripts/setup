@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-sudo -v # ask for sudo upfront
-
-./brew.sh
-sudo ./npm.sh # needs sudo because it's global
-./other.sh
