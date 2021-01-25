@@ -31,8 +31,3 @@ bindkey '^[[B' history-substring-search-down
 # Jump around!
 zit-in "https://github.com/rupa/z" "z"
 zit-lo "z" "z.sh"
-
-# Install Pure theme, loads its dependency (async.zsh) and itself
-zit-in "https://github.com/sindresorhus/pure" "pure"
-zit-lo "pure" "async.zsh"
-zit-lo "pure" "pure.zsh"

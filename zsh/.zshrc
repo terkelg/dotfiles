@@ -50,4 +50,7 @@ source ~/.zsh_functions
 # Load completion configuration
 source ~/.zsh_completion
 
+# Load Starship prompt
+eval "$(starship init zsh)"
+
 load-our-ssh-keys

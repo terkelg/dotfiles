@@ -19,6 +19,7 @@ brew install tmux
 brew install neovim
 
 # Tools
+brew install starship                         # Awesome prompt
 brew install fzf                              # Fuzzy search
 brew install diff-so-fancy                    # Fancy git diffing
 brew install z                                # Fast directory change
